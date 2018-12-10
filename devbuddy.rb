@@ -1,7 +1,7 @@
 class Devbuddy < Formula
   desc "Setup your projects in a consistent way. Help other devs onboard!"
   homepage "https://github.com/devbuddy/devbuddy"
-  url "https://github.com/devbuddy/devbuddy/archive/v0.7.0.tar.gz"
+  url "https://github.com/devbuddy/devbuddy.git", :tag => "v0.7.0"
   sha256 "7222ac7fcf08e8f877bc6a56e903a9b46aa6c639dd20efbdb47d2b4abca0d9b5"
   head "https://github.com/devbuddy/devbuddy.git"
 
