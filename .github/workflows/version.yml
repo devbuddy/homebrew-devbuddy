@@ -1,0 +1,23 @@
+name: Publish a new revision
+
+on: 
+  repository_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Update formulae
+        env:
+          PROJECT_VERSION: ${{ github.event.client_payload.message.version }}
+          PROJECT_REVISION: ${{ github.event.client_payload.message.revision }}
+        run: ./update.sh
+
+      - name: Print formulae
+        run: cat devbuddy.rb
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automatic update to ${{ github.event.client_payload.message.version }}
+          file_pattern: devbuddy.rb 
