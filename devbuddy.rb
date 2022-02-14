@@ -4,8 +4,8 @@ class Devbuddy < Formula
   license "MIT"
 
   url "https://github.com/devbuddy/devbuddy.git",
-      tag:      "v0.12.4",
-      revision: "c12892be82b9caccbfb5bc709367584d30b2e17b"
+      tag:      "v0.12.5",
+      revision: "5f1fa743265fea38f5e559fb56cfa85519f3fde1"
   head "https://github.com/devbuddy/devbuddy.git", branch: "master"
 
   depends_on "go" => :build
